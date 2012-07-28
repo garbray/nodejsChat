@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  #nickname-window
+    .container-modal
+      .content
+        p Please type your nickname :)
+        input#nick(type='text')
+        input#sendNick(type='button', value='Log-in »')
+        p.nickname-err Nickname already taken!!!    
+  #main.dontShow
+    #chat
+      #nickname.container
+        #nicknames
+          ul#ulNicks
+      #messages.container
+        p blablabla
+        p okokoko
+      #send-message
+        textarea#message.container
+        input#send(type='button', value='Send')

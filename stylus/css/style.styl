@@ -1,0 +1,530 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section
+  display: block
+
+audio, canvas, video
+  display: inline-block
+  *display: inline
+  *zoom: 1
+
+audio:not([controls])
+  display: none
+
+[hidden]
+  display: none
+
+html
+  font-size: 100%
+  -webkit-text-size-adjust: 100%
+  -ms-text-size-adjust: 100%
+
+html, button, input, select, textarea
+  font-family: sans-serif
+  color: #222
+
+body
+  margin: 0
+  font-size: 1em
+  line-height: 1.4
+
+::-moz-selection
+  background: #fe57a1
+  color: #fff
+  text-shadow: none
+
+::selection
+  background: #fe57a1
+  color: #fff
+  text-shadow: none
+
+a
+  color: #00e
+
+a:visited
+  color: #551a8b
+
+a:hover
+  color: #06e
+
+a:focus
+  outline: thin dotted
+
+a:hover, a:active
+  outline: 0
+
+abbr[title]
+  border-bottom: 1px dotted
+
+b, strong
+  font-weight: bold
+
+blockquote
+  margin: 1em 40px
+
+dfn
+  font-style: italic
+
+hr
+  display: block
+  height: 1px
+  border: 0
+  border-top: 1px solid #ccc
+  margin: 1em 0
+  padding: 0
+
+ins
+  background: #ff9
+  color: #000
+  text-decoration: none
+
+mark
+  background: #ff0
+  color: #000
+  font-style: italic
+  font-weight: bold
+
+pre, code, kbd, samp
+  font-family: monospace, serif
+  _font-family: 'courier new', monospace
+  font-size: 1em
+
+pre
+  white-space: pre-wrap
+  word-wrap: break-word
+
+q
+  quotes: none
+
+q:before, q:after
+  content: none
+
+small
+  font-size: 85%
+
+sub, sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+
+sup
+  top: -0.5em
+
+sub
+  bottom: -0.25em
+
+ul, ol
+  margin: 1em 0
+  padding: 0 0 0 40px
+
+dd
+  margin: 0 0 0 40px
+
+nav ul, nav ol
+  list-style: none
+  list-style-image: none
+  margin: 0
+  padding: 0
+
+img
+  border: 0
+  -ms-interpolation-mode: bicubic
+  vertical-align: middle
+
+svg:not(:root)
+  overflow: hidden
+
+figure
+  margin: 0
+
+form
+  margin: 0
+
+fieldset
+  border: 0
+  margin: 0
+  padding: 0
+
+label
+  cursor: pointer
+
+legend
+  border: 0
+  *margin-left: -7px
+  padding: 0
+  white-space: normal
+
+button, input, select, textarea
+  font-size: 100%
+  margin: 0
+  vertical-align: baseline
+  *vertical-align: middle
+
+button, input
+  line-height: normal
+
+button, input[type="button"], input[type="reset"], input[type="submit"]
+  cursor: pointer
+  -webkit-appearance: button
+  *overflow: visible
+
+button[disabled], input[disabled]
+  cursor: default
+
+input[type="checkbox"], input[type="radio"]
+  box-sizing: border-box
+  padding: 0
+  *width: 13px
+  *height: 13px
+
+input[type="search"]
+  -webkit-appearance: textfield
+  -moz-box-sizing: content-box
+  -webkit-box-sizing: content-box
+  box-sizing: content-box
+
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button
+  -webkit-appearance: none
+
+button::-moz-focus-inner, input::-moz-focus-inner
+  border: 0
+  padding: 0
+
+textarea
+  overflow: auto
+  vertical-align: top
+  resize: vertical
+
+input:valid, textarea:valid
+
+input:invalid, textarea:invalid
+  background-color: #f0dddd
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+td
+  vertical-align: top
+
+.chromeframe
+  margin: 0.2em 0
+  background: #ccc
+  color: black
+  padding: 0.2em 0
+/***********************************
+Author: garbray
+************************************/
+
+
+/************** Modal ******************/
+#nickname-window
+  position absolute
+  height 100%
+  top 0
+  right 0
+  z-index 999
+  overflow auto
+  opacity 1 
+  width 100%
+  transition-duration(300ms)
+  transition-property(opacity)
+
+#nickname-window.hide 
+  height 0
+  opacity 0
+
+#nickname-window .container-modal
+  padding 40px 30px
+  margin 30px auto
+  background white  
+  box-shadow 1px 1px 10px #000
+  border-radius(5px)
+  position relative
+  max-width 300px
+  color black
+  opacity 1
+
+  input[type=text]
+    background white
+    border-radius 5px
+    padding 5px
+    width 270px
+
+  input[type=button]
+    background #A9014B url(../img/alert-overlay.png) repeat-x
+    margin 15px
+
+    &:hover
+      box-shadow 1px 1px 10px rgba(0,0,0,0.4)
+
+.nickname-err
+  visibility hidden
+  color #A9014B
+/************** input type button style ***********/
+input[type=button]
+  background #222 url(../img/alert-overlay.png) repeat-x
+  border-radius 5px
+  border none
+  width 100px
+  margin 0
+  float right
+  padding 8px 14px 9px
+  color white
+  text-shadow 0 -1px 1px rgba(0, 0, 0, 0.25)
+  border-bottom 1px solid rgba(0, 0, 0, 0.25)
+  float right
+
+  &:hover
+      box-shadow 1px 1px 10px rgba(0,0,0,0.4)
+
+/************** Content ******************/
+*
+  li
+    border-bottom dotted
+
+body
+  background url(../img/metal.png) 
+
+
+#main.dontShow
+  opacity 0.1
+
+#main
+  margin 10px auto 40px
+  width 1024px
+
+#chat
+  height 635px
+  width 100%
+
+#nickname, #messages
+  background #fff
+  margin 15px
+  border-radius 10px
+  padding 10px
+
+#nickname
+  width 200px
+  height 450px
+  float left
+  
+  ul
+    padding 0
+    margin 0
+
+  li
+    list-style none
+    overflow auto
+
+#messages
+  width 730px
+  float right
+  height 450px
+  margin-left 0
+  overflow auto
+
+#send-message
+  margin 0 15px 15px 0
+  width 720px
+  height 100px
+  float right
+
+  textarea
+    width 720px
+    height 50px
+    background #fff
+    border-radius 10px
+    border none
+    resize none
+    outline none
+    margin 0 15px 15px -28px
+    padding 15px
+    overflow auto
+
+.container
+  box-shadow inset -1px -1px 6px rgba(0,0,0,0.8), inset 1px 1px 6px rgba(0,0,0,0.8)
+
+// .connected
+//   #connecting
+//     display none
+
+// .nickname-set
+//   #nickname
+//     display none
+
+// #messages
+//   height 380px
+//   background #eee
+//   em
+//     text-shadow 0 1px 0 #fff
+//     color #999
+//   p
+//     padding 0
+//     margin 0
+//     font 12px Helvetica, Arial
+//     padding 5px 10px
+//     b
+//       display inline-block
+//       padding-right 10px
+//   p:nth-child(even)
+//     background #fafafa
+//   #nicknames
+//     background #ccc
+//     padding 2px 4px 4px
+//     font 11px Helvetica
+//     span
+//       color black
+//     b
+//       display inline-block
+//       color #fff
+//       background #999
+//       padding 3px 6px
+//       margin-right 5px
+//       border-radius 10px
+//       text-shadow 0 1px 0 #666
+//   #lines
+//     height 355px
+//     overflow auto
+//     overflow-x hidden
+//     overflow-y auto
+//     &::-webkit-scrollbar
+//       width 6px
+//       height 6px
+//     &::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment
+//       display block
+//       height 10px
+//     &::-webkit-scrollbar-button:vertical:increment
+//       background-color #fff
+//     &::-webkit-scrollbar-track-piece
+//       background-color #fff
+//       -webkit-border-radius 3px
+//     &::-webkit-scrollbar-thumb:vertical
+//       height 50px
+//       background-color #ccc
+//       -webkit-border-radius 3px
+//     &::-webkit-scrollbar-thumb:horizontal
+//       width 50px
+//       background-color #fff
+//       -webkit-border-radius 3px
+
+// #send-message
+//   background #fff
+//   position relative
+//   input
+//     border none
+//     height 30px
+//     padding 0 10px
+//     line-height 30px
+//     vertical-align middle
+//     width 580px
+//     &:focus
+//       outline 0
+//   button
+//     position absolute
+//     top 5px
+//     right 5px
+
+// button
+//   download-button()
+
+/************************************
+media queries
+*************************************/
+
+  
+/************************************
+
+*************************************/
+.ir
+  display: block
+  border: 0
+  text-indent: -999em
+  overflow: hidden
+  background-color: transparent
+  background-repeat: no-repeat
+  text-align: left
+  direction: ltr
+  *line-height: 0
+
+.ir br
+  display: none
+
+.hidden
+  display: none
+  visibility: hidden
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus
+  clip: auto
+  height: auto
+  margin: 0
+  overflow: visible
+  position: static
+  width: auto
+
+.invisible
+  visibility: hidden
+
+.clearfix:before, .clearfix:after
+  content: ""
+  display: table
+
+.clearfix:after
+  clear: both
+
+.clearfix
+  *zoom: 1
+
+@media print
+  *
+    background: transparent
+    color: black
+    box-shadow: none
+    text-shadow: none
+    filter: none
+    -ms-filter: none
+
+  a, a:visited
+    text-decoration: underline
+
+  a[href]:after
+    content: " (" attr(href) ")"
+
+  abbr[title]:after
+    content: " (" attr(title) ")"
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after
+    content: ""
+
+  pre, blockquote
+    border: 1px solid #999
+    page-break-inside: avoid
+
+  thead
+    display: table-header-group
+
+  tr, img
+    page-break-inside: avoid
+
+  img
+    max-width: 100%
+
+  @page
+    margin: 0.5cm
+
+  p, h2, h3
+    orphans: 3
+    widows: 3
+
+  h2, h3
+    page-break-after: avoid
+
