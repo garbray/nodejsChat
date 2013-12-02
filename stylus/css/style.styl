@@ -218,30 +218,30 @@ Author: garbray
 
 /************** Modal ******************/
 #nickname-window
-  position absolute
   height 100%
-  top 0
-  right 0
-  z-index 999
-  overflow auto
+  position absolute
   opacity 1 
-  width 100%
+  overflow auto
+  right 0
+  top 0
   transition-duration(300ms)
   transition-property(opacity)
+  width 100%
+  z-index 999
 
 #nickname-window.hide 
   height 0
   opacity 0
 
 #nickname-window .container-modal
-  padding 40px 30px
-  margin 30px auto
   background white  
-  box-shadow 1px 1px 10px #000
   border-radius(5px)
-  position relative
-  max-width 300px
+  box-shadow 1px 1px 10px #000
   color black
+  margin 30px auto
+  max-width 300px
+  padding 40px 30px
+  position relative
   opacity 1
 
   input[type=text]
@@ -258,21 +258,20 @@ Author: garbray
       box-shadow 1px 1px 10px rgba(0,0,0,0.4)
 
 .nickname-err
-  visibility hidden
   color #A9014B
+  visibility hidden
 /************** input type button style ***********/
 input[type=button]
   background #222 url(../img/alert-overlay.png) repeat-x
+  border-bottom 1px solid rgba(0, 0, 0, 0.25)
   border-radius 5px
   border none
-  width 100px
-  margin 0
-  float right
-  padding 8px 14px 9px
   color white
-  text-shadow 0 -1px 1px rgba(0, 0, 0, 0.25)
-  border-bottom 1px solid rgba(0, 0, 0, 0.25)
   float right
+  margin 0
+  padding 8px 14px 9px
+  text-shadow 0 -1px 1px rgba(0, 0, 0, 0.25)
+  width 100px
 
   &:hover
       box-shadow 1px 1px 10px rgba(0,0,0,0.4)
@@ -299,47 +298,47 @@ body
 
 #nickname, #messages
   background #fff
-  margin 15px
   border-radius 10px
+  margin 15px
   padding 10px
 
 #nickname
-  width 200px
-  height 450px
   float left
+  height 450px
+  width 200px
   
   ul
-    padding 0
     margin 0
+    padding 0
 
   li
     list-style none
     overflow auto
 
 #messages
-  width 730px
   float right
   height 450px
   margin-left 0
   overflow auto
+  width 730px
 
 #send-message
+  float right
+  height 100px
   margin 0 15px 15px 0
   width 720px
-  height 100px
-  float right
 
   textarea
-    width 720px
-    height 50px
     background #fff
-    border-radius 10px
     border none
-    resize none
-    outline none
+    border-radius 10px
+    height 50px
     margin 0 15px 15px -28px
     padding 15px
+    outline none
     overflow auto
+    resize none
+    width 720px
 
 .container
   box-shadow inset -1px -1px 6px rgba(0,0,0,0.8), inset 1px 1px 6px rgba(0,0,0,0.8)

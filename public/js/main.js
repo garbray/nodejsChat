@@ -85,10 +85,6 @@ socket.on('nicknames',function(usernames){
     liNick.innerText = usernames[i];
     ulNicks.appendChild(liNick);
   }
-  
-
-  // textList = liNick.createTextNode(username);
-  // ulNicks.appendChild(liNick);
   nicknames.appendChild(ulNicks);
 })
 

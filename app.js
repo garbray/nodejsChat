@@ -53,6 +53,10 @@ app.configure('production', function(){
 * Socket-io
 */
 
+/**
+*init socket.io server side
+* create object nicknames
+**/
 var io = require('socket.io').listen(server),
     nicknames = {};
 
@@ -60,6 +64,7 @@ io.configure(function () {
   io.set("transports", ["xhr-polling"]); 
   io.set("polling duration", 10); 
 });
+
 
 io.sockets.on('connection', function (socket) {
   socket.on('sendData',function(data){
